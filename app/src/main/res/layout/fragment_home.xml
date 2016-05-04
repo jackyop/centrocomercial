@@ -1,0 +1,22 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="carlor.centrocomercial.Home">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView2"
+        android:layout_gravity="center"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="270dp"
+        android:id="@+id/imageView3"
+        android:layout_gravity="center"
+        android:onClick="homeClick"/>
+</FrameLayout>

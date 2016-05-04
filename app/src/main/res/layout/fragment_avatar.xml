@@ -1,0 +1,85 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="carlor.centrocomercial.Avatar"
+    android:background="@drawable/fondo">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|bottom">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="ESCOGE TU AVATAR"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal|top"
+            android:textColor="#b14a4a"
+            android:textSize="70dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="250dp"
+            android:id="@+id/avatar1"
+            android:layout_below="@+id/textView"
+            android:layout_alignLeft="@+id/textView"
+            android:layout_alignStart="@+id/textView"
+            android:layout_marginLeft="43dp"
+            android:layout_marginStart="43dp" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="250dp"
+            android:id="@+id/avatar3"
+            android:layout_below="@+id/textView"
+            android:layout_toRightOf="@+id/avatar2"
+            android:layout_toEndOf="@+id/avatar2" />
+
+        <ImageView
+            android:layout_width="240dp"
+            android:layout_height="250dp"
+            android:id="@+id/avatar2"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:id="@+id/imageView4"
+            android:layout_marginTop="64dp"
+            android:layout_alignTop="@+id/avatar2"
+            android:layout_toLeftOf="@+id/textView"
+            android:layout_toStartOf="@+id/textView"
+            android:src="@drawable/flechaizq"
+          />
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:id="@+id/imageView5"
+            android:layout_alignTop="@+id/imageView4"
+            android:layout_toRightOf="@+id/textView"
+            android:layout_toEndOf="@+id/textView"
+            android:src="@drawable/flechaderecha"
+           />
+
+        <ImageView
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:id="@+id/imageView6"
+            android:focusableInTouchMode="false"
+            android:src="@drawable/flechaderecha"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/imageView5"
+            android:layout_alignStart="@+id/imageView5"
+           />
+
+    </RelativeLayout>
+</FrameLayout>
