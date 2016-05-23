@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="carlor.centrocomercial.Home">
+    tools:context="carlor.centrocomercial.Home"
+    android:id="@+id/main">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -19,4 +20,31 @@
         android:id="@+id/imageView3"
         android:layout_gravity="center"
         android:onClick="homeClick"/>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView12"
+        android:layout_gravity="right|top"
+        android:src="@drawable/btn_info"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="25dp" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView14"
+        android:layout_gravity="right|top"
+        android:src="@drawable/btn_sonido_on"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="95dp" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView15"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:src="@drawable/btn_home" />
 </FrameLayout>

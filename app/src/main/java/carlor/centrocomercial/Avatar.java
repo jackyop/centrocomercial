@@ -1,17 +1,18 @@
 package carlor.centrocomercial;
 
 
-import android.app.Activity;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 
 
 /**
@@ -27,10 +28,14 @@ public class Avatar extends Fragment {
     private Bitmap avatar1;
     private Bitmap avatar2;
     private Bitmap avatar3;
+    private Bitmap soundOn;
+    private Bitmap soundOff;
     private ImageView imgb1;
     private ImageView imgb2;
     private ImageView imgb3;
-
+    private ImageView imgb4;
+    private ImageView imgb5;
+    private ImageView imgb6;
     public Avatar(String[] s) {
        this.images=s;
 
@@ -40,16 +45,66 @@ public class Avatar extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_avatar, container, false);
+        final View view = inflater.inflate(R.layout.fragment_avatar, container, false);
         img1 = (ImageView) view.findViewById(R.id.avatar1);
         img2 = (ImageView) view.findViewById(R.id.avatar2);
         img3 = (ImageView) view.findViewById(R.id.avatar3);
         imgb1 = (ImageView) view.findViewById(R.id.imageView4);
         imgb2 = (ImageView) view.findViewById(R.id.imageView5);
         imgb3 = (ImageView) view.findViewById(R.id.imageView6);
-        avatar1 = BitmapFactory.decodeResource(getResources(), R.drawable.personaje1);
-        avatar2 = BitmapFactory.decodeResource(getResources(), R.drawable.personaje2);
-        avatar3 = BitmapFactory.decodeResource(getResources(), R.drawable.personaje3);
+        imgb4 = (ImageView) view.findViewById(R.id.imageView16);
+        imgb5 = (ImageView) view.findViewById(R.id.imageView17);
+        imgb6 = (ImageView) view.findViewById(R.id.imageView18);
+
+        soundOn = BitmapFactory.decodeResource(getResources(), R.drawable.btn_sonido_on);
+        soundOff = BitmapFactory.decodeResource(getResources(), R.drawable.btn_sonido_off);
+        if(((MainActivity)getActivity()).toggleCheck()){
+            imgb5.setImageBitmap(soundOn);
+        }else{
+            imgb5.setImageBitmap(soundOff);
+        }
+
+        imgb4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DisplayMetrics metrics = new DisplayMetrics();
+                getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
+                int height = metrics.heightPixels;
+                int width = metrics.widthPixels;
+                LayoutInflater inflater = (LayoutInflater)
+                        getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                ((MainActivity)getActivity()).pw = new PopupWindow(
+                        inflater.inflate(R.layout.info, null, false),
+                        900,
+                        900,
+                        true);
+                ((MainActivity)getActivity()).pw.showAtLocation(view.findViewById(R.id.main), Gravity.CENTER, 0, 0);
+                //infoimg = (ImageView) ((MainActivity)getActivity()).pw.getContentView().findViewById(R.id.imageView11);
+                //infoimg.getLayoutParams().height = (int) (height*0.54);
+                //infoimg.getLayoutParams().width =   (int) (width*0.60);
+            }
+        });
+        imgb5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((MainActivity)getActivity()).toggleSound();
+                if(((MainActivity)getActivity()).toggleCheck()){
+                    imgb5.setImageBitmap(soundOn);
+                }else{
+                    imgb5.setImageBitmap(soundOff);
+                }
+            }
+        });
+        imgb6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((MainActivity)getActivity()).abrirHome();
+            }
+        });
+
+        avatar1 = BitmapFactory.decodeResource(getResources(), R.drawable.pj_avatar1);
+        avatar2 = BitmapFactory.decodeResource(getResources(), R.drawable.pj_avatar2);
+        avatar3 = BitmapFactory.decodeResource(getResources(), R.drawable.pj_avatar3);
         asignarImagenes();
         imgb1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,10 +124,8 @@ public class Avatar extends Fragment {
         imgb3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ValidarAvatar fragment = new ValidarAvatar(images);
-                android.support.v4.app.FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.mainfragment, fragment);
-                fragmentTransaction.commit();
+                ((MainActivity)getActivity()).images=images;
+                ((MainActivity)getActivity()).abrirValidarAvatar();
             }
         });
         return view;
@@ -128,5 +181,4 @@ public class Avatar extends Fragment {
             }
         }
     }
-
 }

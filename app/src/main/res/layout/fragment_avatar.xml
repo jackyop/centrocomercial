@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="carlor.centrocomercial.Avatar"
-    android:background="@drawable/fondo">
+    android:background="@drawable/fondo_avatar"
+    android:id="@+id/main">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -12,74 +13,101 @@
         android:layout_height="match_parent"
         android:layout_gravity="left|bottom">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="ESCOGE TU AVATAR"
-            android:id="@+id/textView"
-            android:layout_gravity="center_horizontal|top"
-            android:textColor="#b14a4a"
-            android:textSize="70dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
-
         <ImageView
             android:layout_width="200dp"
             android:layout_height="250dp"
             android:id="@+id/avatar1"
-            android:layout_below="@+id/textView"
-            android:layout_alignLeft="@+id/textView"
-            android:layout_alignStart="@+id/textView"
-            android:layout_marginLeft="43dp"
-            android:layout_marginStart="43dp" />
+            android:layout_marginBottom="60dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/avatar2"
+            android:layout_toStartOf="@+id/avatar2"
+            android:layout_marginRight="80dp"/>
 
         <ImageView
             android:layout_width="200dp"
             android:layout_height="250dp"
             android:id="@+id/avatar3"
-            android:layout_below="@+id/textView"
-            android:layout_toRightOf="@+id/avatar2"
-            android:layout_toEndOf="@+id/avatar2" />
-
-        <ImageView
-            android:layout_width="240dp"
-            android:layout_height="250dp"
-            android:id="@+id/avatar2"
             android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_toRightOf="@+id/avatar2"
+            android:layout_toEndOf="@+id/avatar2"
+            android:layout_marginLeft="80dp"/>
 
         <ImageView
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="250dp"
+            android:layout_height="350dp"
+            android:id="@+id/avatar2"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:id="@+id/imageView4"
-            android:layout_marginTop="64dp"
-            android:layout_alignTop="@+id/avatar2"
-            android:layout_toLeftOf="@+id/textView"
-            android:layout_toStartOf="@+id/textView"
-            android:src="@drawable/flechaizq"
-          />
+            android:src="@drawable/btn_flechaizquierda"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/avatar1"
+            android:layout_toStartOf="@+id/avatar1"
+            android:layout_marginRight="100dp"/>
 
         <ImageView
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:id="@+id/imageView5"
+            android:src="@drawable/btn_flechaderecha"
             android:layout_alignTop="@+id/imageView4"
-            android:layout_toRightOf="@+id/textView"
-            android:layout_toEndOf="@+id/textView"
-            android:src="@drawable/flechaderecha"
-           />
+            android:layout_toRightOf="@+id/avatar3"
+            android:layout_toEndOf="@+id/avatar3"
+            android:layout_marginLeft="100dp"/>
 
         <ImageView
-            android:layout_width="135dp"
-            android:layout_height="135dp"
-            android:id="@+id/imageView6"
-            android:focusableInTouchMode="false"
-            android:src="@drawable/flechaderecha"
-            android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/imageView5"
-            android:layout_alignStart="@+id/imageView5"
-           />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView10"
+            android:layout_gravity="center_horizontal|top"
+            android:src="@drawable/txt_elige"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"/>
 
     </RelativeLayout>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView16"
+        android:layout_gravity="right|top"
+        android:src="@drawable/btn_info"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="25dp" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView17"
+        android:layout_gravity="right|top"
+        android:src="@drawable/btn_sonido_on"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="95dp" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView18"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:src="@drawable/btn_home" />
+
+    <ImageView
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:id="@+id/imageView6"
+        android:focusableInTouchMode="false"
+        android:src="@drawable/btn_flechaderecha"
+        android:layout_below="@+id/avatar1"
+        android:layout_toRightOf="@+id/avatar3"
+        android:layout_toEndOf="@+id/avatar3"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="25dp"/>
 </FrameLayout>

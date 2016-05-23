@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="carlor.centrocomercial.MenuJuego"
-    android:background="@drawable/fondo2">
+    android:background="@drawable/fondo_menujuego"
+    android:nestedScrollingEnabled="false"
+    android:id="@+id/main">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -16,21 +18,48 @@
         android:layout_gravity="center" />
 
     <ImageView
-        android:layout_width="450dp"
-        android:layout_height="250dp"
+        android:layout_width="325dp"
+        android:layout_height="162dp"
         android:id="@+id/cupcakes"
         android:layout_gravity="right|top"
-        android:src="@drawable/menu1"
-        android:onClick="CambiarActividadCupcakes"/>
+        android:src="@drawable/icono_menu1"
+        android:onClick="CambiarActividadCupcakes"
+        android:adjustViewBounds="false" />
 
     <ImageView
-        android:layout_width="460dp"
-        android:layout_height="250dp"
+        android:layout_width="309dp"
+        android:layout_height="168dp"
         android:id="@+id/deportes"
         android:layout_gravity="left|bottom"
-        android:src="@drawable/menu2"
+        android:src="@drawable/icono_menu2"
         android:onClick="CambiarActividadDeportes"/>
 
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView22"
+        android:layout_gravity="right|top"
+        android:src="@drawable/btn_info"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="25dp" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView23"
+        android:layout_gravity="right|top"
+        android:src="@drawable/btn_sonido_on"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="95dp" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView24"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:src="@drawable/btn_home" />
 
 
 </FrameLayout>

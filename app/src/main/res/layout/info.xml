@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView11"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/popup" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView13"
+            android:src="@drawable/btn_cerrar"
+            android:padding="0dp"
+            android:onClick="Close"
+            android:layout_alignTop="@+id/imageView11"
+            android:layout_alignRight="@+id/imageView11"
+            android:layout_alignEnd="@+id/imageView11" />
+
+    </RelativeLayout>
+</LinearLayout>

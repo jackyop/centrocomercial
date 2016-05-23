@@ -3,12 +3,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="carlor.centrocomercial.DeportesActivity">
+    tools:context="carlor.centrocomercial.DeportesActivity"
+    android:id="@+id/main">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/mainfragment"></FrameLayout>
+        android:id="@+id/mainfragment">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView25"
+            android:layout_gravity="right|top"
+            android:src="@drawable/btn_info"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="25dp" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView26"
+            android:layout_gravity="right|top"
+            android:src="@drawable/btn_sonido_on"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="95dp" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView27"
+            android:layout_gravity="left|top"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/btn_home" />
+    </FrameLayout>
 </RelativeLayout>

@@ -3,28 +3,59 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="carlor.centrocomercial.ValidarAvatar"
-    android:background="@drawable/fondo1">
+    android:background="@drawable/fondo_validaravatar"
+    android:id="@+id/main">
 
     <!-- TODO: Update blank fragment layout -->
 
     <ImageView
         android:layout_width="500dp"
-        android:layout_height="350dp"
+        android:layout_height="370dp"
         android:id="@+id/imageView7"
         android:layout_gravity="center" />
 
     <ImageView
-        android:layout_width="135dp"
-        android:layout_height="135dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
         android:id="@+id/imageView8"
         android:layout_gravity="left|bottom"
-        android:src="@drawable/flechaizq"
-        />
+        android:src="@drawable/btn_cancelar"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="450dp" />
 
     <ImageView
-        android:layout_width="135dp"
-        android:layout_height="135dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
         android:id="@+id/imageView9"
         android:layout_gravity="right|bottom"
-        android:src="@drawable/flechaderecha" />
+        android:src="@drawable/btn_aceptar"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="450dp"/>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView19"
+        android:layout_gravity="right|top"
+        android:src="@drawable/btn_info"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="25dp" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView20"
+        android:layout_gravity="right|top"
+        android:src="@drawable/btn_sonido_on"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="95dp" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView21"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:src="@drawable/btn_home" />
 </FrameLayout>
