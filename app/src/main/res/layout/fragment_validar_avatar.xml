@@ -15,24 +15,6 @@
         android:layout_gravity="center" />
 
     <ImageView
-        android:layout_width="125dp"
-        android:layout_height="125dp"
-        android:id="@+id/imageView8"
-        android:layout_gravity="left|bottom"
-        android:src="@drawable/btn_cancelar"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="450dp" />
-
-    <ImageView
-        android:layout_width="125dp"
-        android:layout_height="125dp"
-        android:id="@+id/imageView9"
-        android:layout_gravity="right|bottom"
-        android:src="@drawable/btn_aceptar"
-        android:layout_marginBottom="20dp"
-        android:layout_marginRight="450dp"/>
-
-    <ImageView
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:id="@+id/imageView19"
@@ -58,4 +40,18 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="25dp"
         android:src="@drawable/btn_home" />
+
+    <ImageView
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:id="@+id/imageView9"
+        android:src="@drawable/btn_aceptar"
+        android:layout_gravity="right|bottom" />
+
+    <ImageView
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:id="@+id/imageView8"
+        android:layout_gravity="left|bottom"
+        android:src="@drawable/btn_cancelar" />
 </FrameLayout>

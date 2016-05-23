@@ -36,8 +36,8 @@
             android:layout_width="250dp"
             android:layout_height="350dp"
             android:id="@+id/avatar2"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"/>
+            android:layout_alignTop="@+id/avatar1"
+            android:layout_centerHorizontal="true" />
 
         <ImageView
             android:layout_width="80dp"
@@ -46,8 +46,7 @@
             android:src="@drawable/btn_flechaizquierda"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/avatar1"
-            android:layout_toStartOf="@+id/avatar1"
-            android:layout_marginRight="100dp"/>
+            android:layout_toStartOf="@+id/avatar1" />
 
         <ImageView
             android:layout_width="80dp"
@@ -56,8 +55,7 @@
             android:src="@drawable/btn_flechaderecha"
             android:layout_alignTop="@+id/imageView4"
             android:layout_toRightOf="@+id/avatar3"
-            android:layout_toEndOf="@+id/avatar3"
-            android:layout_marginLeft="100dp"/>
+            android:layout_toEndOf="@+id/avatar3" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -66,8 +64,7 @@
             android:layout_gravity="center_horizontal|top"
             android:src="@drawable/txt_elige"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"/>
+            android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
 
